@@ -27,31 +27,31 @@ Deploy using the hello-kubernetes.yaml, which contains definitions for the servi
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-kubernetes
+  name: hello-openshift
 spec:
   type: ClusterIP
   ports:
   - port: 80
     targetPort: 8080
   selector:
-    app: hello-kubernetes
+    app: hello-openshift
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-kubernetes
+  name: hello-openshift
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-kubernetes
+      app: hello-openshift
   template:
     metadata:
       labels:
-        app: hello-kubernetes
+        app: hello-openshift
     spec:
       containers:
-      - name: hello-kubernetes
+      - name: hello-openshift
         image: akilada/hello-openshift:0.1
         ports:
         - containerPort: 8080
@@ -81,31 +81,31 @@ In the definition for the deployment, add an `env` variable with the name of `ME
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-kubernetes-custom
+  name: hello-openshift-custom
 spec:
   type: ClusterIP
   ports:
   - port: 80
     targetPort: 8080
   selector:
-    app: hello-kubernetes-custom
+    app: hello-openshift-custom
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-kubernetes-custom
+  name: hello-openshift-custom
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-kubernetes-custom
+      app: hello-openshift-custom
   template:
     metadata:
       labels:
-        app: hello-kubernetes-custom
+        app: hello-openshift-custom
     spec:
       containers:
-      - name: hello-kubernetes
+      - name: hello-openshift
         image: akilada/hello-openshift:0.1
         ports:
         - containerPort: 8080
