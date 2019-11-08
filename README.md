@@ -58,7 +58,7 @@ spec:
 ```
 
 ```bash
-$ oc apply -f yaml/hello-kubernetes.yaml -n <namespace>
+$ oc apply -f yaml/hello-openshift.yaml -n <namespace>
 ```
 
 This will display a **Hello world!** message when you hit the service endpoint in a browser. You can get the service endpoint ip address by executing the following command and grabbing the returned external ip address value:
