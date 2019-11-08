@@ -148,3 +148,5 @@ spec:
         - name: PORT
           value: "80"
 ```
+This repo is inspired by the work done by Paul Bouwer.
+
