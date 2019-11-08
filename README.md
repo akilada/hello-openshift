@@ -1,5 +1,7 @@
 # Hello Openshift!
 
+This repo is based on the work done by Paul Bouwer's [hello-kubernetes](https://github.com/paulbouwer/hello-kubernetes) project.
+
 This image can be deployed on a Opennshift cluster. It displays:
 - a default **Hello world!** message
 - the pod name
